@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="iOSShellFlyoutBinding.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:iOSShellFlyoutBinding"
+    x:DataType="local:AppShellViewModel"
+    Title="iOSShellFlyoutBinding">
+    <Shell.FlyoutHeader>
+        <Grid HorizontalOptions="Fill" BackgroundColor="Gray" HeightRequest="80">
+            <VerticalStackLayout Spacing="6" VerticalOptions="Center">
+                <Label Text="{Binding DisplayName}" TextColor="Black" />
+                <Label Text="{Binding OrgName}" TextColor="Black" />
+            </VerticalStackLayout>
+        </Grid>
+    </Shell.FlyoutHeader>
+    
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <MenuItem 
+        Text="Dummy 1" />
+    <MenuItem 
+        Text="Dummy 2" />
+    <MenuItem
+        Text="Dummy 3" />
+
+</Shell>
